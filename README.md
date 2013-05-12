@@ -8,17 +8,17 @@ To start
 
 You'll probably have to do this:
 
-  bundle install
+    bundle install
 
-  bundle exec rake db:create
-  bundle exec rake db:schema:load
+    bundle exec rake db:create
+    bundle exec rake db:schema:load
 
 To run
 ------
 
-  rails server
+    rails server
 
 License
 -------
 
- MIT.
+MIT.
