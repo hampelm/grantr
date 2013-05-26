@@ -2,11 +2,12 @@
 
 FactoryGirl.define do
   factory :grant do
-    created "2013-05-12"
+    amount ""
+    created "2013-05-25"
     amount 1.5
     from nil
     to nil
-    start "2013-05-12"
-    ends "2013-05-12"
+    start "2013-05-25"
+    ends "2013-05-25"
   end
 end

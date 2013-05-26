@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Amount:
+  = @grant.amount
+%p
+  %b Created:
+  = @grant.created
+%p
+  %b Amount:
+  = @grant.amount
+%p
+  %b From:
+  = link_to @grant.from.name, @grant.from
+%p
+  %b To:
+  = link_to @grant.to.name, @grant.to
+%p
+  %b Start:
+  = @grant.start
+%p
+  %b End:
+  = @grant.ends
+
+= link_to 'Edit', edit_grant_path(@grant)
+\|
+= link_to 'Back', grants_path

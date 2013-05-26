@@ -11,6 +11,7 @@ gem 'json'
 gem 'pg'
 gem 'rails_admin'
 gem 'simple_form'
+gem 'friendly_id', '~> 4.0.9'
 
 
 group :development do

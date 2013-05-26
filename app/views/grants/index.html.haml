@@ -1,0 +1,31 @@
+%h1 Listing grants
+
+%table
+  %tr
+    %th Amount
+    %th Created
+    %th Amount
+    %th From
+    %th To
+    %th Start
+    %th End
+    %th
+    %th
+    %th
+
+  - @grants.each do |grant|
+    %tr
+      %td= grant.amount
+      %td= grant.created
+      %td= grant.amount
+      %td= grant.from
+      %td= grant.to
+      %td= grant.start
+      %td= grant.end
+      %td= link_to 'Show', grant
+      %td= link_to 'Edit', edit_grant_path(grant)
+      %td= link_to 'Destroy', grant, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Grant', new_grant_path

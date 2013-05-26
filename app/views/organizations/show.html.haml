@@ -10,6 +10,10 @@
   %b Type:
   = @organization.type
 
+%h2 Grants made -- total of #{@organization.grants_received_total}
+= render @organization.grants_made
+
+
 = link_to 'Edit', edit_organization_path(@organization)
 \|
 = link_to 'Back', organizations_path

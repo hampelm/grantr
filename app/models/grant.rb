@@ -1,5 +1,5 @@
 class Grant < ActiveRecord::Base
-  belongs_to :from, :class_name => 'Organization', :foreign_key => "organzation_id"
-  belongs_to :to, :class_name => 'Organization', :foreign_key => "organzation_id"
-  attr_accessible :amount, :created, :end, :start, :from, :to
+  belongs_to :from, :class_name => 'Organization'
+  belongs_to :to, :class_name => 'Organization'
+  attr_accessible :amount, :ends, :start, :from_id, :to_id
 end
