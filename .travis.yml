@@ -2,14 +2,15 @@
 language: ruby
 rvm:
   - 2.0
-
 env:
   global:
     secure: |-
       SRkxB+FRKfL9b7AoyZSuUxDEauEguWCCi5KspYElOxGjZYUQVkfMkZJG0yJt
       5X88/kVrNpuk3o8fJevjRI7rZCiSv5g69h2hv5trC8y+/Ze0I2VzxJ8Wl08y
       67TK2fB5cpzw57C5ZotpwFT7BBErxoNinFgjXOMyMEiFjyRTHHc=
-
+bundler_args: --without development
+before_script:
+  - rake setup
 after_success:
   - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
   - heroku plugins:install https://github.com/ddollar/heroku-anvil

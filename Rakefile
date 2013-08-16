@@ -5,3 +5,7 @@
 require File.expand_path('../config/application', __FILE__)
 
 Grantr::Application.load_tasks
+
+task :setup do
+  sh "rake db:setup"
+end
