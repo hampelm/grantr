@@ -28,6 +28,11 @@ To import data
     rake organizations:import
     rake grants:import
 
+Admin
+-----
+
+Head to `/admin`. You might need to make yerself an account.
+
 License
 -------
 
