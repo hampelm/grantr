@@ -1,14 +1,11 @@
 %p#notice= notice
 
-%p
-  %b Name:
+%h1
   = @organization.name
-%p
-  %b Description:
-  = @organization.description
-%p
-  %b Type:
-  = @organization.type
 
-%h2 Grants rcvd -- total of #{@organization.grants_received_total}
+
+%h2 $#{@organization.grants_received_total} in grants recieved
+= render @organization.grants_received
+
+%h2 $#{@organization.grants_made_total} in grants given
 = render @organization.grants_made
