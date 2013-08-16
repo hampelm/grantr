@@ -12,4 +12,9 @@ class Organization < ActiveRecord::Base
   def grants_received_total
     grants_received.sum(:amount)
   end
+
+  def grants_made_total
+    grants_made.sum(:amount)
+  end
+
 end
