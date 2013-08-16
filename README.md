@@ -13,6 +13,9 @@ You'll probably have to do this:
     bundle exec rake db:create
     bundle exec rake db:schema:load
 
+And make sure the settings in `config/database.yml` will work for you. There
+are [some examples here](https://gist.github.com/erichurst/961978).
+
 To run
 ------
 
