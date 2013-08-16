@@ -18,6 +18,13 @@ To run
 
     rails server
 
+
+To import data
+------
+
+    rake organizations:import
+    rake grants:import
+
 License
 -------
 
