@@ -11,14 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130526003649) do
+ActiveRecord::Schema.define(:version => 20131209230926) do
 
   create_table "grants", :force => true do |t|
     t.date     "created"
     t.float    "amount"
     t.integer  "from_id"
     t.integer  "to_id"
-    t.date     "start"
+    t.date     "starts"
     t.date     "ends"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
