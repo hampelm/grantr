@@ -16,6 +16,9 @@ gem 'friendly_id', '~> 4.0.9'
 
 group :development do
   gem 'haml-rails'
+
+  gem 'guard-rspec', require: false
+  gem 'guard-spring'
 end
 
 # Gems used only for assets and not required
