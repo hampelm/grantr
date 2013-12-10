@@ -1,6 +1,8 @@
 Grantr
 ======
 
+[![Build Status](https://travis-ci.org/hampelm/grantr.png?branch=csv_importer)](https://travis-ci.org/hampelm/grantr)
+
 A simple app for storing organziation <=> grant relationships
 
 To start
