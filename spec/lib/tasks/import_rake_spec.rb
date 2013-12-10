@@ -5,10 +5,13 @@ describe "import:grants" do
 
   its(:prerequisites) { should include("environment") }
 
-  it "imports grants" do
+  it "instantiates a DataImporter and calls import_grants" do
     filepath = 'spec/fixtures/data_importer/grant_simple_example.csv'
 
-    expect{ task.invoke(filepath) }.to change{ Grant.count }.by(2)
+    DataImporter.should_receive(:new).with(filepath).and_call_original
+    DataImporter.any_instance.should_receive(:import_grants)
+
+    task.invoke(filepath)
   end
 
 end
