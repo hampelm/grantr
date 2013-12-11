@@ -41,7 +41,7 @@ describe OrganizationsController do
   describe "GET show" do
     it "assigns the requested organization as @organization" do
       organization = Organization.create! valid_attributes
-      get :show, {:id => organization.id}, valid_session
+      get :show, {:id => organization.slug}, valid_session
       assigns(:organization).should eq(organization)
     end
   end
