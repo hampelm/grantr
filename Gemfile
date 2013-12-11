@@ -1,58 +1,58 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '4.0.2'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'factory_girl_rails'
-gem 'haml'
-gem 'json'
 gem 'pg'
-gem 'rails_admin'
+
+gem 'haml-rails'
+gem 'sass-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.0.0'
 gem 'simple_form'
-gem 'friendly_id', '~> 4.0.9'
+gem 'friendly_id', branch: '~> 5.0.0'
 
+gem 'devise'
+gem 'rails_admin'
 
-group :development do
-  gem 'haml-rails'
-end
+# Deprecate in Rails4!
+gem 'protected_attributes'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# gem 'therubyracer', platforms: :ruby
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
-end
-
+# Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-group :test do
-  gem 'database_cleaner'
-  gem 'rails3-generators' #mainly for factory_girl
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'turbolinks'
+
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '~> 1.2'
+
+group :development, :test do
   gem 'rspec-rails'
- #  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'faker'
 end
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'poltergeist'
+  gem 'webmock'
+  gem 'shoulda-matchers'
+  gem 'timecop'
+end
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+# Use ActiveModel has_secure_password
+# gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
 
-# Deploy with Capistrano
-# gem 'capistrano'
+# Use Capistrano for deployment
+# gem 'capistrano', group: :development
 
-# To use debugger
-# gem 'ruby-debug'
-
-
-gem "devise"
+# Use debugger
+# gem 'debugger', group: [:development, :test]

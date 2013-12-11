@@ -4,8 +4,8 @@
   = @organization.name
 
 
-%h2 $#{@organization.grants_received_total} in grants recieved
+%h2 $#{@organization.total_grants_received} in grants recieved
 = render @organization.grants_received
 
-%h2 $#{@organization.grants_made_total} in grants given
+%h2 $#{@organization.total_grants_made} in grants given
 = render @organization.grants_made

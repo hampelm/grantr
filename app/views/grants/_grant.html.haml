@@ -1,7 +1,6 @@
-%p= "$#{grant.amount}"
-%p= "from #{grant.from.name}"
-%p= "to #{grant.to.name}"
-
-%p= "starts #{grant.start}"
-%p= "ends #{grant.ends}"
+%p $#{grant.amount}
+%p from #{grant.from.name}
+%p to #{grant.to.name}
+%p starts #{grant.starts}
+%p ends #{grant.ends}
 = link_to "More details", grant

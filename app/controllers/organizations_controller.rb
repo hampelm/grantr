@@ -13,7 +13,7 @@ class OrganizationsController < ApplicationController
   # GET /organizations/1
   # GET /organizations/1.json
   def show
-    @organization = Organization.find(params[:id])
+    @organization = Organization.where(slug: params[:id]).first
 
     respond_to do |format|
       format.html # show.html.erb
