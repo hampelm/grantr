@@ -11,17 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130526003649) do
+ActiveRecord::Schema.define(:version => 20131211010341) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "grants", :force => true do |t|
     t.date     "created"
     t.float    "amount"
     t.integer  "from_id"
     t.integer  "to_id"
-    t.date     "start"
+    t.date     "starts"
     t.date     "ends"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "impact_area"
+    t.string   "impact_neighborhood"
+    t.string   "data_source"
+    t.text     "notes"
   end
 
   add_index "grants", ["from_id"], :name => "index_grants_on_from_id"
@@ -34,6 +45,8 @@ ActiveRecord::Schema.define(:version => 20130526003649) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "slug"
+    t.string   "city"
+    t.string   "state"
   end
 
   add_index "organizations", ["slug"], :name => "index_organizations_on_slug", :unique => true
