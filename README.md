@@ -1,6 +1,8 @@
 Grantr
 ======
 
+[![Build Status](https://travis-ci.org/hampelm/grantr.png?branch=csv_importer)](https://travis-ci.org/hampelm/grantr)
+
 A simple app for storing organziation <=> grant relationships
 
 To start
@@ -27,6 +29,13 @@ To import data
 
     rake organizations:import
     rake grants:import
+
+New Way:
+
+  rake import:grants[../path/to/data.csv]
+
+Path should be relative to the Rails root.
+
 
 Admin
 -----

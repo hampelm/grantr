@@ -30,6 +30,11 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+group :development do
+  gem 'guard-rspec'
+  gem 'guard-spring'
+end
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
