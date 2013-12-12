@@ -31,6 +31,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 group :development do
+  gem 'haml-rails'
+
   gem 'guard-rspec'
   gem 'guard-spring'
 end
